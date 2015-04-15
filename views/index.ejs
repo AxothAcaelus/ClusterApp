@@ -8,22 +8,19 @@
 </head>
 
 <body ng-app="clusterApp" ng-controller="MainCtrl">
-    <ul>
+
+  <h2>My PID: {{currentPID.pid}}</h2> 
+
+  <form ng-submit="getMyPIDs()">
+    <h3>Get More PIDs</h3>
+    <button type="submit">GET PIDS</button>
+  </form>
+
+  <ul>
     <div ng-repeat="node in cluster">
       <li>{{node.pid}}</li>
     </div>
-   </ul>
-   <br><br>
-   <form ng-submit="getPIDs()">
-      <h3>Test PIDs </h3>
-      <button type="submit">TestPIDS</button>
-   </form>
-  <br><br>  
-  <div>
-    <form ng-submit="getMyPIDs()">
-      <h3>Display PIDs </h3>
-      <button type="submit">GETPIDS</button>
-    </form>
-  </div>
+  </ul>
+
 </body>
 </html>
