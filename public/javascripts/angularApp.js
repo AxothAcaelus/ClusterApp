@@ -1,13 +1,12 @@
 angular.module('clusterApp', [])
 .controller('MainCtrl', [
   '$scope', '$http',
-  function($scope, $http){
-    
-
-    
-    $http.get('/pid/').success(function(data) {
-      $scope.currentPID = data;
-    });
+  function($scope, $http, $timeout){ 
+   
+      $http.get('/pid').success(function(data) {
+        $scope.currentPID = data;
+        $timeout(updateID, 1000);
+      });
 
     $scope.getMyPIDs = function() {
       $scope.cluster = [];
