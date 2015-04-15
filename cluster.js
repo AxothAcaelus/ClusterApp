@@ -4,7 +4,7 @@ var numCPUs = require('os').cpus().length;
 if (cluster.isMaster) {
   console.log("numCPUs "+numCPUs);
   // OK, lets ignore the actual CPUS, so we can see the concurrency
-  numCPUs :q= 4;
+  numCPUs = 4;
 
      for (var i = 0; i < numCPUs; i++) {
          cluster.fork(); 
