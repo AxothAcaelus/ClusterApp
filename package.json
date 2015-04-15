@@ -1,5 +1,4 @@
 {
-  "name": "cluster",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -14,4 +13,7 @@
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0"
   }
+  "name": "ClusterApp-Stetson.Wood",
+  "description": "Lab 11",
+  "repository": "https://github.com/AxothAcaelus/ClusterApp.git"
 }
