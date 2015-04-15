@@ -8,12 +8,13 @@ angular.module('clusterApp', [])
     }
     $scope.getMyPIDs = function() {
        
-   
-      $http.get('/pid').success(function(data) {
-        console.log("getAll");
-        console.log(data);
-        $scope.cluster.push(data);
-      });
+      for(var i = 0; i < 100; i++) { 
+        $http.get('/pid').success(function(data) {
+          console.log("getAll");
+          console.log(data);
+          $scope.cluster.push(data);
+        });
+      }
     }
   } 
 ]);   
